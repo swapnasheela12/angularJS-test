@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <script src="angular-min.js"></script>
+    <script src="app.js"></script>
+    <style>
+        body {
+            font-size: 1.5em;
+        }
+    </style>
+    <title>Expression and interpolation</title>
+</head>
+
+<body ng-app='msgApp'>
+    <h1> Expression and interpolation</h1>
+    <div ng-controller='msgController'>
+      orignal  Message is : {{name}} <br>{{sayMessage()}}<br><br>
+      specific Filter use : {{saySpecificMessage()}}<br><br>
+      truth filter use : {{saySpecificMessage() | truth : 'snacks' :'meals'}}<br><br> <!--snacks and meals are argument pass to the truth filter -->
+      one more filter use with chaning filter : {{saySpecificMessage() | truth : 'snacks' :'meals'| uppercase}}
+    </div>
+
+</body>
+
+</html>

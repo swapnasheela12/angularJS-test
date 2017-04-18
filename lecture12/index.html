@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script src="angular-min.js"></script>
+    <script src="app.js"></script>
+    <style> body{font-size: 1.5em;}</style>
+    <title>Expression and interpolation</title>
+  </head>
+  <body ng-app='msgApp'>
+      <h1> Expression and interpolation</h1>
+      <div ng-controller='msgController'>
+Message is : {{name}} <br>{{sayMessage()}}<br>
+cost is : {{costfood | currency}}
+
+          <!-- <div>
+                <button ng-click="feeddogs()">feed to dog</button>
+                <br>
+                <img ng-src="images/bruno{{stateOfBeing}}.jpeg"><br>
+          </div> -->
+      </div>
+
+  </body>
+</html>
