@@ -29,7 +29,7 @@
     }
 
     function truthFilter(){//this filter you will pass the argument to the filter
-      return function(input, target, replace){
+      return function(input, target, replace){//(target and replace are the factory filter argument)target is targeted string replace is want to replace string.
         input = input || "";
         input = input.replace(target, replace);
         return input;
