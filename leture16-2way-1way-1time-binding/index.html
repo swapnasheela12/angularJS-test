@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html ng-app="BindingApp">
+    <head>
+        <meta charset="utf-8">
+        <script src="angular-min.js"></script>
+        <script src="app.js"></script>
+        <style>
+              body{font-size: 1.2em;}
+        </style>
+    </head>
+    <body>
+          <h1>2-way 1-way and 1-time binding</h1>
+          <div ng-controller="BindingController">
+              <button ng-click="showNumberOfWatchers()">Log# of Watchers</button>
+              <button ng-click="setFullName()">set full name</button><br>
+
+               Full name is one way binding: {{ fullName }}<br><!--one way binding means direct update to propertie value is automatically update in UI -->
+               Full name is one time binding: {{ :: fullName }}<br><!--one time binding means initialized value of propertie is automatically updated in UI and watchers for properties is removed,so UI never again get updated-->
+              <button ng-click="logFirstName()">Log First Name</button><br>
+              <button ng-click="logFullName()">Log the full name</button><br>
+
+            <div>
+            two way binding :<input type="text" ng-model="firstName">  <!-- two way binding is here through ng-model -Listener for change on input automaticaly set up by angular updates properties value on $scope and  even it will direct update to prop value is automaticaly update in UI-->
+            </div>
+
+          </div>
+    </body>
+</html>
